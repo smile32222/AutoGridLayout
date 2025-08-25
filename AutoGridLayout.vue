@@ -106,6 +106,11 @@ export default {
   display: grid;
   grid-gap: var(--grid-gap); /* 设置间距 */
   grid-template-columns: repeat(var(--grid-cols), 1fr); /* 默认列数 */
+
+  align-content: start; /* 防止行被均匀拉伸填满容器高度 */
+  align-items: start; /* 网格项在单元格内从顶部对齐，不被拉伸 */
+  /* 可选：让自动生成的行高度按照内容决定 */
+  grid-auto-rows: min-content;
 }
 
 .auto-grid-container > * {
